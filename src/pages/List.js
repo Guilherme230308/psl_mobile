@@ -60,8 +60,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#00008B',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 6
+        borderRadius: 12
     }
-
 
 })

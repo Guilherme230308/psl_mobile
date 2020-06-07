@@ -37,7 +37,7 @@ export default function Login({ navigation }) {
     }
 
     return (
-        <KeyboardAvoidingView behavior='padding' enabled={Platform.OS = 'ios'} style={styles.container}>
+        <View behavior='padding' enabled={Platform.OS = 'ios'} style={styles.container}>
             <View style={styles.Image}>
                 <Image source={logo} />
             </View>
@@ -73,7 +73,7 @@ export default function Login({ navigation }) {
                     <Text style={styles.linkText}>Cadastre-se</Text>
                 </TouchableOpacity>
             </View>
-        </KeyboardAvoidingView>
+        </View>
     );
 }
 

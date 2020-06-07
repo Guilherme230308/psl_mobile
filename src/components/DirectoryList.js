@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { withNavigation } from 'react-navigation';
-import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
+import { TouchableOpacity, View, Text, StyleSheet, FlatList, Image } from 'react-native';
 
 import api from '../services/api';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+
+import logo from '../assets/images/logo.png';
 
 function DirectoryList({ email, initial, navigation }) {
     const [directories, setDirectories] = useState([]);
@@ -33,8 +34,8 @@ function DirectoryList({ email, initial, navigation }) {
                 style={styles.list}
                 data={directories}
                 keyExtractor={directory => directory.id}
-                horizontal
-                showsHorizontalScrollIndicator={false}
+                vertical
+                showsHorizontalScrollIndicator={true}
                 renderItem={({ item }) => (
                     <View style={styles.listItem}>
                         <Text style={styles.city}>{item.city}</Text>
@@ -87,10 +88,11 @@ const styles = StyleSheet.create({
     },
 
     thumbnail: {
-        width: 240,
+        width: 340,
         height: 140,
-        resizeMode: 'cover',
         borderRadius: 12,
+        alignSelf: 'center',
+        resizeMode: 'stretch',
 
     },
 
@@ -109,11 +111,14 @@ const styles = StyleSheet.create({
 
     buttom: {
         height: 32,
+        width: 340,
         backgroundColor: '#00008B',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 4,
-        marginTop: 15
+        alignSelf: 'center',
+        borderRadius: 12,
+        marginTop: 12
+
     },
 
     buttonText: {

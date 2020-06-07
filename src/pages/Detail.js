@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { SafeAreaView, View, Text, Image, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 
 export default function Detail({ navigation }) {
 
@@ -11,6 +11,7 @@ export default function Detail({ navigation }) {
     const phone = navigation.getParam('phone');
 
     async function route() {
+
     }
 
     async function handleSubmit() {
@@ -23,6 +24,7 @@ export default function Detail({ navigation }) {
 
     return (
         <SafeAreaView style={styles.container}>
+            
             <View style={styles.top}>
                 <Text style={styles.title}>Bem vindo ao diretório de</Text>
                 <Text style={styles.diretorio}>{city}</Text>
@@ -40,8 +42,8 @@ export default function Detail({ navigation }) {
             </View>
 
             <View style={styles.button_container}>
-                <TouchableOpacity onPress={route} style={styles.button}>
-                    <Text style={styles.buttonText}>Obter Rota</Text>
+                <TouchableOpacity onPress={() => { Linking.openURL('https://psl.org.br/filiacao.html') }} style={styles.button}>
+                    <Text style={styles.buttonText} >Navegue</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={handleSubmit} style={styles.button}>
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20,
         color: '#00008B',
-        marginTop: 40,
+        marginTop: 80,
         textAlign: 'center',
     },
 
@@ -72,34 +74,22 @@ const styles = StyleSheet.create({
         color: '#00008B',
         marginTop: 10,
         textAlign: 'center',
-        marginBottom: 20
+        marginBottom: 10
     },
 
     label: {
         fontWeight: 'bold',
+        marginBottom: 2,
         fontSize: 16,
         color: '#00008B',
         textAlign: 'center',
     },
 
     text: {
+        fontWeight: 'normal',
         fontSize: 16,
         color: '#00008B',
-        marginTop: 2,
-        textAlign: 'center',
-        fontWeight: 'normal'
-
-    },
-
-    input: {
-        borderWidth: 1,
-        borderColor: '#ddd',
-        paddingHorizontal: 10,
-        fontSize: 16,
-        color: '#444',
-        height: 30,
-        marginBottom: 10,
-        borderRadius: 6
+        textAlign: 'center'
     },
 
     button_container: {
@@ -111,11 +101,11 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         alignItems: 'center',
         justifyContent: 'center',
-        height: 60,
+        height: 34,
         backgroundColor: '#00008B',
         borderRadius: 12,
-        marginTop: 2,
-        width: 360
+        marginTop: 10,
+        width: 340
     },
 
     buttonText: {
@@ -126,16 +116,18 @@ const styles = StyleSheet.create({
 
     image: {
         height: 10,
-        width: 360,
+        width: 340,
         alignSelf: 'center',
         justifyContent: 'center',
         alignItems: 'center',
         paddingVertical: 100,
-        marginTop: 20
+        marginTop: 20,
+        borderRadius: 12
     },
 
     content: {
         marginTop: 20,
-    },
+        paddingHorizontal: 20
+    }
 
 });

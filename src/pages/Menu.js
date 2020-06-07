@@ -45,7 +45,7 @@ export default function Message({ navigation }) {
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={exit} style={styles.button}>
-                    <Text style={styles.buttonText}>Voltar</Text>
+                    <Text style={styles.buttonText}>Sair</Text>
                 </TouchableOpacity>
             </View>
 

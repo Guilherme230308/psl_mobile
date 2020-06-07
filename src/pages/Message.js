@@ -85,8 +85,50 @@ export default function Message({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+
     container: {
         flex: 1,
+        marginTop: 20
+    },
+
+    label: {
+        fontWeight: 'bold',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        fontSize: 16,
+        color: '#00008B',
+        textAlign: 'left',
+    },
+
+    text: {
+        fontWeight: 'normal',
+        fontSize: 16,
+        color: '#00008B',
+        textAlign: 'center',
+        paddingHorizontal: 20
+    },
+
+    button_container: {
+        flex: 1,
+        marginTop: 20     
+    },
+
+    button: {
+        alignSelf: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 34,
+        backgroundColor: '#00008B',
+        borderRadius: 12,
+        marginTop: 10,
+        width: 340,
+        paddingHorizontal: 20
+    },
+
+    buttonText: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 16
     },
 
     logo: {
@@ -97,42 +139,26 @@ const styles = StyleSheet.create({
     },
 
     message: {
+        //border
         borderStyle: 'solid',
         borderColor: 'gray',
         borderWidth: 1,
+        borderRadius: 12,
+        
+        //alignment
         alignSelf: 'center',
         justifyContent: "flex-start",
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        
+        //size
         width: 340,
         height: 100,
-        borderRadius: 12,
         backgroundColor: '#dae1f7',
-        paddingVertical: 10,
+
+        //text
         fontSize: 20,
         textAlignVertical: 'top',
-    },
-
-    button: {
-        alignSelf: 'center',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: 40,
-        backgroundColor: '#00008B',
-        borderRadius: 12,
-        marginTop: 20,
-        width: 340,
-    },
-
-    buttonText: {
-        color: 'white',
-        fontWeight: 'bold',
-        fontSize: 16
-    },
-
-    label: {
-        fontWeight: 'bold',
-        color: '#00008B',
-        marginBottom: 10,
-        paddingHorizontal: 10,
     },
 
     input: {
@@ -146,7 +172,5 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         alignSelf: 'center',
     }
-
-
 
 });
